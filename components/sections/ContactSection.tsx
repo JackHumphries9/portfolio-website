@@ -9,6 +9,7 @@ import {
 	FormLabel,
 	GridItem,
 	Heading,
+	HStack,
 	Input,
 	Link,
 	Select,
@@ -21,6 +22,7 @@ import {
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import React from "react";
+import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { Element } from "react-scroll";
 import SectionTitle from "../SectionTitle";
 
@@ -61,6 +63,9 @@ const ContactSection = () => {
 										base: "2xl",
 										md: "4xl",
 									})}
+									_hover={{
+										textUnderlineOffset: 0,
+									}}
 									textAlign="center"
 									textDecor={"underline"}
 									textUnderlineOffset={6}
@@ -85,47 +90,65 @@ const ContactSection = () => {
 								w="full"
 							>
 								<GridItem colSpan={2}>
-									<FormControl>
-										<Input
-											type="text"
-											placeholder="Name"
-											rounded={"full"}
-											backgroundColor={useColorModeValue(
-												"#F2F2F2",
-												"#272727"
-											)}
-										/>
-									</FormControl>
+									<motion.div
+										whileHover={{
+											scale: 1.01,
+										}}
+									>
+										<FormControl>
+											<Input
+												type="text"
+												placeholder="Name"
+												rounded={"full"}
+												backgroundColor={useColorModeValue(
+													"#F2F2F2",
+													"#272727"
+												)}
+											/>
+										</FormControl>
+									</motion.div>
 								</GridItem>
 								<GridItem colSpan={2}>
-									<FormControl>
-										<Input
-											type="email"
-											placeholder="Email"
-											rounded={"full"}
-											backgroundColor={useColorModeValue(
-												"#F2F2F2",
-												"#272727"
-											)}
-										/>
-									</FormControl>
+									<motion.div
+										whileHover={{
+											scale: 1.01,
+										}}
+									>
+										<FormControl>
+											<Input
+												type="email"
+												placeholder="Email"
+												rounded={"full"}
+												backgroundColor={useColorModeValue(
+													"#F2F2F2",
+													"#272727"
+												)}
+											/>
+										</FormControl>
+									</motion.div>
 								</GridItem>
 								<GridItem colSpan={2}>
-									<FormControl>
-										<Textarea
-											placeholder="Type your message here..."
-											rounded={"2xl"}
-											backgroundColor={useColorModeValue(
-												"#F2F2F2",
-												"#272727"
-											)}
-										/>
-									</FormControl>
+									<motion.div
+										whileHover={{
+											scale: 1.01,
+										}}
+									>
+										<FormControl>
+											<Textarea
+												placeholder="Type your message here..."
+												rounded={"2xl"}
+												backgroundColor={useColorModeValue(
+													"#F2F2F2",
+													"#272727"
+												)}
+											/>
+										</FormControl>
+									</motion.div>
 								</GridItem>
 
 								<GridItem colSpan={2}>
 									<Flex justifyContent={"center"}>
-										<Box flex={1}>
+										<Box flex={1} w="100%">
 											<Button
 												size="md"
 												rounded="full"
@@ -139,6 +162,41 @@ const ContactSection = () => {
 							</SimpleGrid>
 						</VStack>
 					</Box>
+				</Flex>
+				<Flex flex={1} spacing="6" pb={10}>
+					<HStack flex={1} justifyContent="space-around">
+						<Link href="https://instagram.com/jackphumphries">
+							<FaInstagram
+								size={useBreakpointValue({ base: 30, sm: 20 })}
+								style={{ display: "inline", paddingTop: "7px" }}
+							/>
+							{useBreakpointValue({ base: "", sm: "Instagram" })}
+						</Link>
+						<Link href="https://twitter.com/jackphumphries">
+							<FaTwitter
+								size={useBreakpointValue({ base: 30, sm: 20 })}
+								style={{
+									display: "inline",
+									paddingTop: "7px",
+								}}
+							/>{" "}
+							{useBreakpointValue({ base: "", sm: "Twitter" })}
+						</Link>
+						<Link href="https://github.com/jackhumphries9">
+							<FaGithub
+								size={useBreakpointValue({ base: 30, sm: 20 })}
+								style={{ display: "inline", paddingTop: "7px" }}
+							/>{" "}
+							{useBreakpointValue({ base: "", sm: "Github" })}
+						</Link>
+						<Link href="https://linkedin.com/in/jack-humphries/">
+							<FaLinkedin
+								size={useBreakpointValue({ base: 30, sm: 20 })}
+								style={{ display: "inline", paddingTop: "7px" }}
+							/>
+							{useBreakpointValue({ base: "", sm: "LinkedIn" })}
+						</Link>
+					</HStack>
 				</Flex>
 			</Container>
 		</Element>

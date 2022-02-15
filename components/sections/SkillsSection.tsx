@@ -10,7 +10,7 @@ import { FaPencilRuler, FaDatabase, FaTabletAlt } from "react-icons/fa";
 const SkillsSection = () => {
 	return (
 		<Element name="skills">
-			<Container h="100%" maxW="container.xl" p={0} pt={20}>
+			<Container h="100%" maxW="container.xl" p={0} pt={5}>
 				<SectionTitle>Skills</SectionTitle>
 
 				<Flex

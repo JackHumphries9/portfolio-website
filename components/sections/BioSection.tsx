@@ -13,6 +13,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { Element } from "react-scroll";
+import ImageStack from "../ImageStack";
 import SectionTitle from "../SectionTitle";
 
 const BioSection = () => {
@@ -24,7 +25,7 @@ const BioSection = () => {
 					my={20}
 					direction={{ base: "column", md: "row" }}
 					flex={1}
-					h="80vh"
+					h="100%"
 				>
 					<Box
 						w={{ base: "100%", md: "50%" }}
@@ -55,12 +56,13 @@ const BioSection = () => {
 						</Button>
 					</Box>
 					<Box
-						w="50%"
 						flex={1}
 						h="100%"
 						spacing="6"
+						px={5}
 						align="flex-start"
 					>
+						<ImageStack />
 						{/* <Box position={"relative"} h="20%">
 							<Image
 								src="/project.webp"
