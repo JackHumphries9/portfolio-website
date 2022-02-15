@@ -11,7 +11,6 @@ import {
 	useColorModeValue,
 } from "@chakra-ui/react";
 import React, { ReactElement } from "react";
-import { MdOutlineDesignServices } from "react-icons/md";
 
 export default function SkillCard({
 	title,
@@ -28,7 +27,7 @@ export default function SkillCard({
 				maxW={{ base: "100%", lg: "320px" }}
 				w={"full"}
 				bg={useColorModeValue("#F2F2F2", "#272727")}
-				boxShadow={"2xl"}
+				boxShadow={"xl"}
 				rounded={"lg"}
 				p={6}
 				textAlign={"center"}

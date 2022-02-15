@@ -11,12 +11,14 @@ const ImageStack = () => {
 		>
 			<Box gridColumn="1 / span 8" gridRow={1}>
 				<Image
+					boxShadow={"lg"}
 					src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/110238/portrait1.jpeg"
 					alt=""
 				/>
 			</Box>
 			<Box gridRow={1} gridColumn="4 / -1" pt="20%" zIndex={1}>
 				<Image
+					boxShadow={"2xl"}
 					src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/110238/texture-waves-cropped.jpg"
 					alt=""
 				/>

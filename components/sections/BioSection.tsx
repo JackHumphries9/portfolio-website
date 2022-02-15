@@ -33,6 +33,7 @@ const BioSection = () => {
 						justifyItems={"center"}
 						bg={useColorModeValue("#F2F2F2", "#272727")}
 						borderRadius={"2xl"}
+						boxShadow={"2xl"}
 						p={10}
 					>
 						<Heading as="h2" fontWeight="medium">

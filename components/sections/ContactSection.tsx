@@ -44,6 +44,10 @@ const ContactSection = () => {
 								base: "4xl",
 								md: "6xl",
 							})}
+							textAlign={useBreakpointValue({
+								base: "center",
+								md: "left",
+							})}
 						>
 							Want to work with me?
 						</Heading>
@@ -52,10 +56,7 @@ const ContactSection = () => {
 						<br />
 
 						<motion.div whileHover={{ scale: 1.1 }}>
-							<Link
-								href="mailto:me@jackhumphries.io"
-								_hover={{ textDecoration: "none" }}
-							>
+							<Link href="mailto:me@jackhumphries.io">
 								<Heading
 									as="h2"
 									fontWeight={300}
@@ -64,7 +65,7 @@ const ContactSection = () => {
 										md: "4xl",
 									})}
 									_hover={{
-										textUnderlineOffset: 0,
+										textUnderlineOffset: 4,
 									}}
 									textAlign="center"
 									textDecor={"underline"}

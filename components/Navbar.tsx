@@ -12,7 +12,7 @@ import {
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import NextLink from "next/link";
 
-const NavLink = ({ children }: { children: ReactNode }) => (
+const NavLink = ({ href, children }: { href: string; children: ReactNode }) => (
 	<Link
 		p={2}
 		textUnderlineOffset={6}
@@ -20,7 +20,7 @@ const NavLink = ({ children }: { children: ReactNode }) => (
 		_hover={{
 			textDecoration: "underline",
 		}}
-		href={"#"}
+		href={href}
 		_focus={{
 			ring: 2,
 			ringColor: "#C5A47E",
@@ -64,8 +64,8 @@ export default function Nav() {
 
 					<Flex alignItems={"center"}>
 						<Stack direction={"row"} spacing={7}>
-							<NavLink>Works</NavLink>
-							<NavLink>Blog</NavLink>
+							<NavLink href="/works">Works</NavLink>
+							<NavLink href="/blog">Blog</NavLink>
 							<Box
 								fontSize="sm"
 								p={2}
