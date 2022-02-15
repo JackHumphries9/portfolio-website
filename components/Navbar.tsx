@@ -34,7 +34,7 @@ export default function Nav() {
 	const { colorMode, toggleColorMode } = useColorMode();
 	return (
 		<>
-			<Box px={12} py={4} position="fixed" as="nav" w="100%">
+			<Box px={12} py={4} position="fixed" as="nav" w="100%" zIndex={100}>
 				<Flex
 					h={16}
 					alignItems={"center"}
