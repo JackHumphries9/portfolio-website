@@ -14,7 +14,7 @@ const SkillsSection = () => {
 				<SectionTitle>Skills</SectionTitle>
 
 				<Flex
-					justifyContent={"space-between"}
+					justifyContent={"space-around"}
 					flexDir={{ base: "column", lg: "row" }}
 				>
 					<SkillCard title="Frontend" icon={<FaPencilRuler />}>

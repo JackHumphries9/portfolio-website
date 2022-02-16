@@ -7,7 +7,7 @@ const HeaderSection = ({ title }: { title: string }) => {
 		<>
 			<Box
 				overflowX="hidden"
-				height="60vh"
+				height="70vh"
 				display={"flex"}
 				alignItems="center"
 				justifyItems={"center"}
@@ -27,7 +27,7 @@ const HeaderSection = ({ title }: { title: string }) => {
 							overflowY="hidden"
 							wordBreak={"keep-all"}
 							as="h1"
-							fontSize={{ base: "10w", md: "8vw" }}
+							fontSize={{ base: "10vw", md: "8vw" }}
 							textAlign="center"
 							fontWeight="200"
 						>

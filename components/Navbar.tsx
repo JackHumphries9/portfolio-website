@@ -34,7 +34,14 @@ export default function Nav() {
 	const { colorMode, toggleColorMode } = useColorMode();
 	return (
 		<>
-			<Box px={12} py={4} position="fixed" as="nav" w="100%" zIndex={100}>
+			<Box
+				px={useBreakpointValue({ base: 8, md: 12 })}
+				py={useBreakpointValue({ base: 2, md: 4 })}
+				position="fixed"
+				as="nav"
+				w="100%"
+				zIndex={100}
+			>
 				<Flex
 					h={16}
 					alignItems={"center"}

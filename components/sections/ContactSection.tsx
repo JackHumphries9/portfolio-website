@@ -56,7 +56,10 @@ const ContactSection = () => {
 						<br />
 
 						<motion.div whileHover={{ scale: 1.1 }}>
-							<Link href="mailto:me@jackhumphries.io">
+							<Link
+								_hover={{ textDecor: "none" }}
+								href="mailto:me@jackhumphries.io"
+							>
 								<Heading
 									as="h2"
 									fontWeight={300}
@@ -65,7 +68,7 @@ const ContactSection = () => {
 										md: "4xl",
 									})}
 									_hover={{
-										textUnderlineOffset: 4,
+										textUnderlineOffset: 5,
 									}}
 									textAlign="center"
 									textDecor={"underline"}
