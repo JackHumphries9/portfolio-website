@@ -35,8 +35,8 @@ export default function Nav() {
 	return (
 		<>
 			<Box
-				px={useBreakpointValue({ base: 8, md: 12 })}
-				py={useBreakpointValue({ base: 2, md: 4 })}
+				px={{ base: 8, md: 12 }}
+				py={{ base: 2, md: 4 }}
 				position="fixed"
 				as="nav"
 				w="100%"
