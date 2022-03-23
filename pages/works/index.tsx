@@ -9,47 +9,48 @@ import ArticleCard from "../../components/ArticleCard";
 
 import MainLayout from "../../components/layouts/MainLayout";
 import HeaderSection from "../../components/sections/HeaderSection";
+import { getAllWorks } from "../../lib/getWorks";
+import type Work from "../../types/work";
 
-const Home: NextPage = () => {
+type Props = {
+	allWorks: Work[];
+};
+
+const Home = ({ allWorks }: Props) => {
 	return (
 		<MainLayout title="Works">
 			<HeaderSection title="Works" />
 			<Container maxW="container.xl">
 				<SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacingX={5}>
-					<ArticleCard
-						title="Test"
-						imgUrl="/placeholder-article.jpeg"
-						date="25 Feb 21"
-						readTime={5}
-					>
-						Lorem ipsum dolor sit, amet consectetur adipisicing
-						elit. Est placeat maxime animi cumque quae architecto,
-						non aliquam fugit modi omnis.
-					</ArticleCard>
-					<ArticleCard
-						title="Test"
-						imgUrl="/placeholder-article.jpeg"
-						date="25 Feb 21"
-						readTime={5}
-					>
-						Lorem ipsum dolor sit, amet consectetur adipisicing
-						elit. Est placeat maxime animi cumque quae architecto,
-						non aliquam fugit modi omnis.
-					</ArticleCard>
-					<ArticleCard
-						title="Test"
-						imgUrl="/placeholder-article.jpeg"
-						date="25 Feb 21"
-						readTime={5}
-					>
-						Lorem ipsum dolor sit, amet consectetur adipisicing
-						elit. Est placeat maxime animi cumque quae architecto,
-						non aliquam fugit modi omnis.
-					</ArticleCard>
+					{allWorks.map((work: Work) => {
+						return (
+							<ArticleCard
+								title={work.title}
+								imgUrl={work.coverImage}
+								slug={"/works/" + work.slug}
+							>
+								{work.excerpt}
+							</ArticleCard>
+						);
+					})}
 				</SimpleGrid>
 			</Container>
 		</MainLayout>
 	);
+};
+
+export const getStaticProps = async () => {
+	const allWorks = getAllWorks([
+		"title",
+		"date",
+		"slug",
+		"coverImage",
+		"excerpt",
+	]);
+
+	return {
+		props: { allWorks },
+	};
 };
 
 export default Home;
