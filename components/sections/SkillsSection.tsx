@@ -5,7 +5,7 @@ import SectionTitle from "../SectionTitle";
 import SkillCard from "../SkillCard";
 
 import { MdOutlineDesignServices } from "react-icons/md";
-import { FaPencilRuler, FaDatabase, FaTabletAlt } from "react-icons/fa";
+import { FaPencilRuler, FaDatabase, FaServer } from "react-icons/fa";
 
 const SkillsSection = () => {
 	return (
@@ -18,22 +18,22 @@ const SkillsSection = () => {
 					flexDir={{ base: "column", lg: "row" }}
 				>
 					<SkillCard title="Frontend" icon={<FaPencilRuler />}>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						At placeat nesciunt possimus corporis doloribus aut
-						voluptates ullam officiis! Nobis, consectetur!
+						Although not my area of specialty, I can use HTML, CSS,
+						and JavaScript to create modern and fluid user
+						interfaces on the web. I strive to make the experience
+						quick, convenient, and modern.
 					</SkillCard>
-					<SkillCard
-						title="Frontend"
-						icon={<MdOutlineDesignServices />}
-					>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						At placeat nesciunt possimus corporis doloribus aut
-						voluptates ullam officiis! Nobis, consectetur!
+					<SkillCard title="Web API's" icon={<FaServer />}>
+						I have experience with PHP, Node JS, and Flask building
+						web applications and web APIs. I endeavor to make my API
+						applications secure and fast so that the user experience
+						is safe and fast.
 					</SkillCard>
 					<SkillCard title="Backend" icon={<FaDatabase />}>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						At placeat nesciunt possimus corporis doloribus aut
-						voluptates ullam officiis! Nobis, consectetur!
+						The other pillar of any application is the backend
+						deployment. Whether it is Docker or Kubernetes, I have
+						experience deploying software using these techniques. I
+						can also deploy other apps.
 					</SkillCard>
 				</Flex>
 			</Container>

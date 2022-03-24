@@ -25,7 +25,7 @@ export default function ArticleCard({
 	slug: string;
 }) {
 	return (
-		<Link href={`/${slug}`}>
+		<Link href={slug}>
 			<GridItem cursor={"pointer"}>
 				<Center py={6}>
 					<Box

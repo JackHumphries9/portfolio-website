@@ -21,6 +21,7 @@ const NavLink = ({ href, children }: { href: string; children: ReactNode }) => (
 			textDecoration: "underline",
 		}}
 		href={href}
+		borderRadius="full"
 		_focus={{
 			ring: 2,
 			ringColor: "#C5A47E",
@@ -51,7 +52,10 @@ export default function Nav() {
 						<NextLink href="/" passHref>
 							<Link
 								fontWeight={600}
+								borderRadius="full"
 								textUnderlineOffset={4}
+								ring={2}
+								padding={2}
 								_hover={{
 									textDecoration: "underline",
 								}}

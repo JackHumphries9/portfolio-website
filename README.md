@@ -1,34 +1,87 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://jackhumphries.io">
+    <img src="/public/favicons/android-chrome-512x512.png" alt="Logo" width="80" height="80">
+  </a>
 
-## Getting Started
+  <h3 align="center">Portfolio Website</h3>
 
-First, run the development server:
+</p>
 
-```bash
-npm run dev
-# or
-yarn dev
+<!-- TABLE OF CONTENTS -->
+
+## Table of Contents
+
+-   [About the Project](#about-the-project)
+-   [Built With](#built-with)
+-   [Running the Website](#running-the-website)
+-   [Contributing](#contributing)
+-   [License](#license)
+-   [Contact](#contact)
+
+<!-- ABOUT THE PROJECT -->
+
+## About The Project
+
+[![Site Screenshot](/screenshot.png)](https://jackhumphries.io)
+
+This is my portfolio website built from the ground up to give you an overview of me and my skills. It also contains my blog too.
+
+### Built With
+
+-   [Next.JS](https://nextjs.org/)
+-   [React.JS](https://reactjs.org)
+-   [Chakra UI](https://chakra-ui.com/)
+-   [Typescript](https://www.typescriptlang.org/)
+-   Hosted on [Vercel](https://vercel.com)
+
+<!-- GETTING STARTED -->
+
+## Running the Website
+
+1. Clone the repo
+
+```sh
+git clone https://github.com/JackHumphries9/Socially.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install NPM packages
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```sh
+npm install
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+To run this project in development mode, type
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```sh
+npm run dev
+```
 
-## Learn More
+To build this project, run:
 
-To learn more about Next.js, take a look at the following resources:
+```sh
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<!-- CONTRIBUTING -->
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Contributing
 
-## Deploy on Vercel
+I'm not really open to contributions for this project as it is a personal project. However, if you notice a mistake, an error or something you think that isn't right, consider opening an issue. Thank you!
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<!-- LICENSE -->
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## License
+
+Distributed under the GNU General Public License v3.0 License. See `LICENSE` for more information.
+
+<!-- CONTACT -->
+
+## Contact
+
+Your Name - [@JackPHumphries](https://twitter.com/JackPHumphries) - me@jackhumphries.io
+
+Project Link: [https://github.com/JackHumphries9/portfolio-website](https://github.com/JackHumphries9/portfolio-website)
+
+Website Link: [https://jackhumphries.io](https://jackhumphries.io)

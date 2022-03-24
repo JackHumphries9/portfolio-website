@@ -41,15 +41,15 @@ const BioSection = () => {
 						</Heading>
 						<br />
 						<Text fontSize={"md"}>
-							Lorem ipsum dolor sit amet consectetur adipisicing
-							elit. Doloremque, repellendus alias! Explicabo
-							libero provident aperiam dolorem itaque quisquam,
-							quo voluptatem quibusdam fugit quas ipsa fuga a
-							velit eveniet sunt placeat vel eligendi reiciendis.
-							Ipsum, repudiandae. Dolorem atque doloremque iure,
-							expedita esse commodi id nemo quaerat tenetur
-							maiores reprehenderit illo assumenda possimus rerum
-							qui voluptate deserunt.
+							Jack Humphries is a full-stack developer based in
+							Manchester. He has a passion for building
+							applications, services and any other digital
+							creations. Since he was young, he has always had an
+							interest in computing and electronics. From learning
+							to code when he was only 12 years old, he certainly
+							has experience and is always learning new
+							technologies. Currently, he is studying Computer
+							Science at Manchester Metropolitan University.
 						</Text>
 						<br />
 						<Button bg={"#C5A47E"}>
