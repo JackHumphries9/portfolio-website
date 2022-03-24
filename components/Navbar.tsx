@@ -1,20 +1,19 @@
-import { ReactNode } from "react";
+import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import {
 	Box,
 	Flex,
 	Link,
-	Button,
-	useColorModeValue,
 	Stack,
-	useColorMode,
 	useBreakpointValue,
+	useColorMode,
 } from "@chakra-ui/react";
-import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import NextLink from "next/link";
+import { ReactNode } from "react";
 
 const NavLink = ({ href, children }: { href: string; children: ReactNode }) => (
 	<Link
 		p={2}
+		// @ts-ignore
 		textUnderlineOffset={6}
 		fontSize="sm"
 		_hover={{
@@ -53,8 +52,8 @@ export default function Nav() {
 							<Link
 								fontWeight={600}
 								borderRadius="full"
+								// @ts-ignore
 								textUnderlineOffset={4}
-								ring={2}
 								padding={2}
 								_hover={{
 									textDecoration: "underline",

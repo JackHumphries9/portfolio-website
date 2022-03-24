@@ -43,7 +43,7 @@ This is my portfolio website built from the ground up to give you an overview of
 1. Clone the repo
 
 ```sh
-git clone https://github.com/JackHumphries9/Socially.git
+git clone https://github.com/JackHumphries9/portfolio-website.git
 ```
 
 2. Install NPM packages

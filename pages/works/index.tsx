@@ -1,12 +1,5 @@
-import {
-	Container,
-	Flex,
-	SimpleGrid,
-	useBreakpointValue,
-} from "@chakra-ui/react";
-import type { NextPage } from "next";
+import { Container, SimpleGrid } from "@chakra-ui/react";
 import ArticleCard from "../../components/ArticleCard";
-
 import MainLayout from "../../components/layouts/MainLayout";
 import HeaderSection from "../../components/sections/HeaderSection";
 import { getAllWorks } from "../../lib/getWorks";
@@ -28,6 +21,7 @@ const Home = ({ allWorks }: Props) => {
 								title={work.title}
 								imgUrl={work.coverImage}
 								slug={"/works/" + work.slug}
+								key={work.slug}
 							>
 								{work.excerpt}
 							</ArticleCard>

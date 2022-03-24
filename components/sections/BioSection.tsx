@@ -2,14 +2,11 @@ import { ChevronRightIcon } from "@chakra-ui/icons";
 import {
 	Box,
 	Button,
-	Center,
 	Container,
 	Flex,
 	Heading,
 	Text,
-	useBreakpointValue,
 	useColorModeValue,
-	Image,
 } from "@chakra-ui/react";
 import React from "react";
 import { Element } from "react-scroll";
@@ -56,32 +53,8 @@ const BioSection = () => {
 							View Works <ChevronRightIcon />
 						</Button>
 					</Box>
-					<Box
-						flex={1}
-						h="100%"
-						spacing="6"
-						px={5}
-						align="flex-start"
-					>
+					<Box flex={1} h="100%" px={5}>
 						<ImageStack />
-						{/* <Box position={"relative"} h="20%">
-							<Image
-								src="/project.webp"
-								rounded={"xl"}
-								left="10%"
-								top="5%"
-								position="absolute"
-							/>
-						</Box>
-						<Box position={"relative"} h="20%">
-							<Image
-								src="/project.webp"
-								rounded={"xl"}
-								position="absolute"
-								left="50%"
-								top="10%"
-							/>
-						</Box> */}
 					</Box>
 				</Flex>
 			</Container>

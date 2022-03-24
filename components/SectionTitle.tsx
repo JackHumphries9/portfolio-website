@@ -5,6 +5,7 @@ const SectionTitle = ({ children }: { children: React.ReactNode }) => {
 	return (
 		<Heading
 			textDecor="underline"
+			//@ts-ignore
 			textUnderlineOffset={6}
 			pl={useBreakpointValue({ base: 5, md: 20 })}
 		>

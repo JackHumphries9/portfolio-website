@@ -1,13 +1,9 @@
 import {
-	Heading,
 	Avatar,
 	Box,
 	Center,
+	Heading,
 	Text,
-	Stack,
-	Button,
-	Link,
-	Badge,
 	useColorModeValue,
 } from "@chakra-ui/react";
 import { motion, useAnimation } from "framer-motion";
@@ -18,10 +14,12 @@ export default function SkillCard({
 	title,
 	icon,
 	children,
+	transitionDelay = 0,
 }: {
 	title: string;
 	icon: ReactElement;
 	children: React.ReactNode;
+	transitionDelay?: number;
 }) {
 	const controls = useAnimation();
 	const [ref, inView] = useInView();
@@ -36,14 +34,17 @@ export default function SkillCard({
 		<motion.div
 			ref={ref}
 			animate={controls}
-			initial={{ opacity: 0, translateY: "-10px" }}
+			initial={{
+				opacity: 0,
+				translateY: "-10px",
+				startOffset: transitionDelay,
+			}}
 			variants={{
 				visible: {
 					opacity: 1,
 					translateY: "0px",
 					transition: { duration: 1 },
 				},
-				hidden: { opacity: 0, translateY: "-10px" },
 			}}
 		>
 			<Center py={6}>
@@ -56,13 +57,7 @@ export default function SkillCard({
 					p={6}
 					textAlign={"center"}
 				>
-					<Avatar
-						size={"xl"}
-						icon={icon}
-						alt={"Icon"}
-						mb={4}
-						pos={"relative"}
-					/>
+					<Avatar size={"xl"} icon={icon} mb={4} pos={"relative"} />
 					<Heading fontSize={"2xl"} fontFamily={"body"}>
 						{title}
 					</Heading>

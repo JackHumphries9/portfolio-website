@@ -1,20 +1,15 @@
-import { ChevronRightIcon } from "@chakra-ui/icons";
 import {
 	Box,
 	Button,
-	Checkbox,
 	Container,
 	Flex,
 	FormControl,
-	FormLabel,
 	GridItem,
 	Heading,
 	HStack,
 	Input,
 	Link,
-	Select,
 	SimpleGrid,
-	Text,
 	Textarea,
 	useBreakpointValue,
 	useColorModeValue,
@@ -36,7 +31,7 @@ const ContactSection = () => {
 					direction={{ base: "column", md: "row" }}
 					flex={1}
 				>
-					<Box flex={1} h="100%" spacing="6" align="flex-start">
+					<Box flex={1} h="100%">
 						<Heading
 							as="h1"
 							fontWeight={300}
@@ -72,6 +67,7 @@ const ContactSection = () => {
 									}}
 									textAlign="center"
 									textDecor={"underline"}
+									// @ts-ignore
 									textUnderlineOffset={6}
 								>
 									me@jackhumphries.io
@@ -79,7 +75,7 @@ const ContactSection = () => {
 							</Link>
 						</motion.div>
 					</Box>
-					<Box flex={1} h="100%" spacing="6" align="flex-start">
+					<Box flex={1} h="100%">
 						<VStack
 							w="full"
 							h="full"
@@ -167,7 +163,7 @@ const ContactSection = () => {
 						</VStack>
 					</Box>
 				</Flex>
-				<Flex flex={1} spacing="6" pb={10}>
+				<Flex flex={1} pb={10}>
 					<HStack flex={1} justifyContent="space-around">
 						<Link href="https://instagram.com/jackphumphries">
 							<FaInstagram

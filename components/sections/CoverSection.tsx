@@ -64,7 +64,7 @@ const CoverSection = () => {
 					console.log("Scroll down");
 				}}
 			>
-				<Scroll to="bio" smooth={true}>
+				<Scroll to="bio" smooth={true} href="#bio">
 					<motion.div
 						whileHover={{ scale: 1.2 }}
 						whileTap={{ scale: 0.9 }}

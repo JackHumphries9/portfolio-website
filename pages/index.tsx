@@ -1,7 +1,4 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
-
 import MainLayout from "../components/layouts/MainLayout";
 import BioSection from "../components/sections/BioSection";
 import ContactSection from "../components/sections/ContactSection";

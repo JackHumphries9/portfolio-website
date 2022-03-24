@@ -1,12 +1,11 @@
 import {
 	Box,
 	Center,
-	Heading,
-	Text,
-	Stack,
-	useColorModeValue,
 	GridItem,
-	useBreakpointValue,
+	Heading,
+	Stack,
+	Text,
+	useColorModeValue,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -25,7 +24,7 @@ export default function ArticleCard({
 	slug: string;
 }) {
 	return (
-		<Link href={slug}>
+		<Link href={slug} passHref>
 			<GridItem cursor={"pointer"}>
 				<Center py={6}>
 					<Box
@@ -45,7 +44,11 @@ export default function ArticleCard({
 							mb={6}
 							pos={"relative"}
 						>
-							<Image src={imgUrl} layout={"fill"} />
+							<Image
+								src={imgUrl}
+								layout={"fill"}
+								alt="Article Cover Photo"
+							/>
 						</Box>
 						<Stack>
 							<Heading
