@@ -14,14 +14,75 @@ import {
 	useBreakpointValue,
 	useColorModeValue,
 	VStack,
+	Text,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useState } from "react";
 import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { Element } from "react-scroll";
+import useEmailJS from "../../hooks/useEmailJS";
 import SectionTitle from "../SectionTitle";
 
 const ContactSection = () => {
+	const [name, setName] = useState<string>("");
+	const [email, setEmail] = useState<string>("");
+	const [message, setMessage] = useState<string>("");
+	const [isLoading, setIsLoading] = useState<boolean>(false);
+	const [feedback, setFeedback] = useState<{ msg: string; success: boolean }>(
+		{ msg: "", success: false }
+	);
+
+	const send = useEmailJS();
+
+	const submitMail = async () => {
+		setIsLoading(true);
+		setFeedback({ msg: "", success: false });
+		// validation time!
+
+		if (name.length <= 2 || email.length <= 6 || message.length <= 2) {
+			setFeedback({
+				msg: "There are fields which do not have enough characters in them.",
+				success: false,
+			});
+			setIsLoading(false);
+			return;
+		} else {
+			const emailRegex =
+				/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+			if (!emailRegex.test(email)) {
+				setFeedback({
+					msg: "The email field is not valid.",
+					success: false,
+				});
+				setIsLoading(false);
+				return;
+			} else {
+				const success = await send(name, email, message);
+
+				console.log(name, email, message);
+
+				if (success) {
+					setFeedback({
+						msg: "Your email was send successfully!",
+						success: true,
+					});
+					setIsLoading(false);
+
+					return;
+				} else {
+					setFeedback({
+						msg: "Unfortunately, an error occured.",
+						success: false,
+					});
+					setIsLoading(false);
+
+					return;
+				}
+			}
+		}
+	};
+
 	return (
 		<Element name="contact">
 			<Container maxW="container.xl" p={0} pt={20}>
@@ -104,6 +165,10 @@ const ContactSection = () => {
 													"#F2F2F2",
 													"#272727"
 												)}
+												onChange={(e) => {
+													setName(e.target.value);
+												}}
+												required
 											/>
 										</FormControl>
 									</motion.div>
@@ -123,6 +188,10 @@ const ContactSection = () => {
 													"#F2F2F2",
 													"#272727"
 												)}
+												onChange={(e) => {
+													setEmail(e.target.value);
+												}}
+												required
 											/>
 										</FormControl>
 									</motion.div>
@@ -141,18 +210,34 @@ const ContactSection = () => {
 													"#F2F2F2",
 													"#272727"
 												)}
+												onChange={(e) => {
+													setMessage(e.target.value);
+												}}
+												required
 											/>
 										</FormControl>
 									</motion.div>
 								</GridItem>
 
 								<GridItem colSpan={2}>
+									<Text
+										color={
+											feedback.success ? undefined : "red"
+										}
+										pb={2}
+									>
+										{feedback.msg}
+									</Text>
 									<Flex justifyContent={"center"}>
 										<Box flex={1} w="100%">
 											<Button
 												size="md"
 												rounded="full"
 												backgroundColor="#C5A47E"
+												isLoading={isLoading}
+												onClick={() => {
+													submitMail();
+												}}
 											>
 												Send
 											</Button>
