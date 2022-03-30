@@ -20,6 +20,7 @@ const ImageStack = () => {
 						src="/images/img-back.jpeg"
 						width={2533}
 						height={4029}
+						alt="Jack Humphries"
 					/>
 				</span>
 				{/* <Image boxShadow={"lg"} src="/images/img-back.jpeg" alt="" /> */}
@@ -34,6 +35,7 @@ const ImageStack = () => {
 						src="/images/img-forward.jpg"
 						width={1440}
 						height={1440}
+						alt="Jack Humphries"
 					/>
 				</span>
 				{/* <Image
