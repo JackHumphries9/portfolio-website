@@ -1,4 +1,4 @@
-import { extendTheme } from "@chakra-ui/react";
+import { ChakraProviderProps, extendTheme, Input } from "@chakra-ui/react";
 import { mode } from "@chakra-ui/theme-tools";
 
 const styles = {
@@ -9,9 +9,7 @@ const styles = {
 	}),
 };
 
-const components = {
-	Heading: {},
-};
+const components = {};
 
 const fonts = {
 	heading: "Montserrat",

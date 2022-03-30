@@ -6,6 +6,7 @@ import {
 	Stack,
 	useBreakpointValue,
 	useColorMode,
+	useColorModeValue,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { ReactNode } from "react";
@@ -23,7 +24,7 @@ const NavLink = ({ href, children }: { href: string; children: ReactNode }) => (
 			borderRadius="full"
 			_focus={{
 				ring: 2,
-				ringColor: "#C5A47E",
+				ringColor: useColorModeValue("brand.200", "brand.400"),
 			}}
 		>
 			{children}
@@ -61,7 +62,10 @@ export default function Nav() {
 								}}
 								_focus={{
 									ring: 2,
-									ringColor: "#C5A47E",
+									ringColor: useColorModeValue(
+										"brand.200",
+										"brand.400"
+									),
 								}}
 								fontSize="sm"
 							>

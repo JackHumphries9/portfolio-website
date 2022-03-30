@@ -1,5 +1,13 @@
 import { ChevronDownIcon } from "@chakra-ui/icons";
-import { Box, Center, Container, Flex, Heading } from "@chakra-ui/react";
+import {
+	Box,
+	Center,
+	Container,
+	Flex,
+	Heading,
+	useColorMode,
+	useColorModeValue,
+} from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { Link as Scroll } from "react-scroll";
 import React from "react";
@@ -64,7 +72,14 @@ const CoverSection = () => {
 					console.log("Scroll down");
 				}}
 			>
-				<Scroll to="bio" smooth={true} href="#bio">
+				<Scroll
+					to="bio"
+					smooth={true}
+					href="#bio"
+					style={{
+						outlineColor: "#CCB08E",
+					}}
+				>
 					<motion.div
 						whileHover={{ scale: 1.2 }}
 						whileTap={{ scale: 0.9 }}

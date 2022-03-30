@@ -47,12 +47,13 @@ export default function SkillCard({
 				},
 			}}
 		>
+			{/* // TODO: Add motion on mouse move */}
 			<Center py={6}>
 				<Box
 					maxW={{ base: "100%", lg: "320px" }}
 					w={"full"}
 					bg={useColorModeValue("#F2F2F2", "#272727")}
-					boxShadow={"xl"}
+					boxShadow={"lg"}
 					rounded={"lg"}
 					p={6}
 					textAlign={"center"}
@@ -63,8 +64,8 @@ export default function SkillCard({
 						mb={4}
 						pos={"relative"}
 						backgroundColor={useColorModeValue(
-							"brand.400",
-							"brand.300"
+							"brand.200",
+							"brand.400"
 						)}
 					/>
 					<Heading fontSize={"2xl"} fontFamily={"body"}>

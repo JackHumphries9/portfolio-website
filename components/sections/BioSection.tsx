@@ -8,12 +8,16 @@ import {
 	Text,
 	useColorModeValue,
 } from "@chakra-ui/react";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 import { Element } from "react-scroll";
 import ImageStack from "../ImageStack";
 import SectionTitle from "../SectionTitle";
 
 const BioSection = () => {
+	const router = useRouter();
+
 	return (
 		<Element name="bio">
 			<Container maxW="container.xl" p={0} pt={20}>
@@ -37,7 +41,7 @@ const BioSection = () => {
 							Jack Humphries, The Developer
 						</Heading>
 						<br />
-						<Text fontSize={"md"}>
+						<Text fontSize={"lg"}>
 							Jack Humphries is a full-stack developer based in
 							Manchester. He has a passion for building
 							applications, services and any other digital
@@ -49,7 +53,19 @@ const BioSection = () => {
 							Science at Manchester Metropolitan University.
 						</Text>
 						<br />
-						<Button bg={"brand"}>
+						<Button
+							bg={useColorModeValue("brand.200", "brand.400")}
+							onClick={() => {
+								router.push("/works");
+							}}
+							_focus={{
+								ring: 2,
+								ringColor: useColorModeValue(
+									"brand.400",
+									"brand.200"
+								),
+							}}
+						>
 							View Works <ChevronRightIcon />
 						</Button>
 					</Box>

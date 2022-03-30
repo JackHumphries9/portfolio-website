@@ -58,7 +58,7 @@ export default function ArticleCard({
 							>
 								{title}
 							</Heading>
-							<Text color={"gray.500"}>{children}</Text>
+							<Text>{children}</Text>
 						</Stack>
 						<Stack
 							mt={6}
@@ -72,7 +72,7 @@ export default function ArticleCard({
 									spacing={0}
 									fontSize={"sm"}
 								>
-									<Text color={"gray.500"}>
+									<Text>
 										{new Date(date).toLocaleDateString(
 											"en-GB"
 										)}
