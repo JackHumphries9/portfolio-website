@@ -13,6 +13,7 @@ const Home = ({ article }: Props) => {
 			title={article.title}
 			coverImage={article.coverImage}
 			date={article.date}
+			excerpt={article.excerpt}
 		>
 			{article.content}
 		</ArticleLayout>
@@ -27,6 +28,7 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 		"content",
 		"ogImage",
 		"coverImage",
+		"excerpt",
 	]);
 
 	return {

@@ -49,7 +49,7 @@ const BioSection = () => {
 							Science at Manchester Metropolitan University.
 						</Text>
 						<br />
-						<Button bg={"#C5A47E"}>
+						<Button bg={"brand"}>
 							View Works <ChevronRightIcon />
 						</Button>
 					</Box>

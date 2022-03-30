@@ -11,23 +11,24 @@ import NextLink from "next/link";
 import { ReactNode } from "react";
 
 const NavLink = ({ href, children }: { href: string; children: ReactNode }) => (
-	<Link
-		p={2}
-		// @ts-ignore
-		textUnderlineOffset={6}
-		fontSize="sm"
-		_hover={{
-			textDecoration: "underline",
-		}}
-		href={href}
-		borderRadius="full"
-		_focus={{
-			ring: 2,
-			ringColor: "#C5A47E",
-		}}
-	>
-		{children}
-	</Link>
+	<NextLink href={href}>
+		<Link
+			p={2}
+			// @ts-ignore
+			textUnderlineOffset={6}
+			fontSize="sm"
+			_hover={{
+				textDecoration: "underline",
+			}}
+			borderRadius="full"
+			_focus={{
+				ring: 2,
+				ringColor: "#C5A47E",
+			}}
+		>
+			{children}
+		</Link>
+	</NextLink>
 );
 
 export default function Nav() {

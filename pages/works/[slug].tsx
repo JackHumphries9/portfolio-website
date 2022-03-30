@@ -8,7 +8,11 @@ type Props = {
 
 const Home = ({ work }: Props) => {
 	return (
-		<ArticleLayout title={work.title} coverImage={work.coverImage}>
+		<ArticleLayout
+			title={work.title}
+			coverImage={work.coverImage}
+			excerpt={work.excerpt}
+		>
 			{work.content}
 		</ArticleLayout>
 	);

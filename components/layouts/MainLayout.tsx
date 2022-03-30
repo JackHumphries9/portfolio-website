@@ -2,16 +2,30 @@ import { Box, Container } from "@chakra-ui/react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import React from "react";
+import IOpenGraph from "../../types/opengraph";
 
 import Navbar from "../Navbar";
 
 const MainLayout = ({
 	children,
 	title,
+	og,
 }: {
 	children: React.ReactNode;
 	title: string;
+	og?: IOpenGraph;
 }) => {
+	let opengraph: IOpenGraph = {
+		title: "Jack Humphries Website",
+		image: "/favicons/android-chrome-512x512.png",
+		type: "website",
+		url: "https://jackhumphries.io",
+		description: "Welcome to Jack Humphries' website portfolio and blog. ",
+	};
+
+	if (og) {
+		opengraph = og;
+	}
 	return (
 		<Box as="main" overflowY="hidden">
 			<Head>
@@ -21,24 +35,15 @@ const MainLayout = ({
 				/>
 				<meta name="description" content="Jack Humphries' Website" />
 				<meta name="author" content="Jack Humphries" />
-				{/* 
-        TODO: Implement the touch icons
-        <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-				<link
-					rel="shortcut icon"
-					href="/favicon.ico"
-					type="image/x-icon"
-				/>
-				<meta name="twitter:card" content="summary_large_image" />
-				<meta name="twitter:site" content="@craftzdog" />
-				<meta name="twitter:creator" content="@craftzdog" />
-				<meta name="twitter:image" content="/card.png" />
+				<meta property="og:title" content={opengraph.title} />
+				<meta property="og:site_name" content="Jack Humphries" />
+				<meta property="og:url" content={opengraph.url} />
 				<meta
-					property="og:site_name"
-					content="Takuya Matsuyama's Homepage"
+					property="og:description"
+					content={opengraph.description}
 				/>
-				<meta property="og:type" content="website" />
-				<meta property="og:image" content="/card.png" /> */}
+				<meta property="og:type" content={opengraph.type} />
+				<meta property="og:image" content={opengraph.image} />
 				<title>{title} - Jack Humphries</title>
 			</Head>
 

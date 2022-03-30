@@ -18,8 +18,19 @@ const fonts = {
 	body: "Montserrat",
 };
 
-const colours = {
-	brand: "#C5A47E",
+const colors = {
+	brand: {
+		"50": "#F7F3ED",
+		"100": "#E9DCCE",
+		"200": "#DBC6AE",
+		"300": "#CCB08E",
+		"400": "#BE996F",
+		"500": "#B0834F",
+		"600": "#8D693F",
+		"700": "#6A4F2F",
+		"800": "#463420",
+		"900": "#231A10",
+	},
 };
 
 const config = {
@@ -27,5 +38,5 @@ const config = {
 	useSystemColorMode: false,
 };
 
-const theme = extendTheme({ config, styles, components, fonts, colours });
+const theme = extendTheme({ config, styles, components, fonts, colors });
 export default theme;

@@ -11,6 +11,7 @@ import {
 	useColorModeValue,
 } from "@chakra-ui/react";
 import ChakraUIRenderer from "chakra-ui-markdown-renderer";
+import { useRouter } from "next/router";
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import MainLayout from "./MainLayout";
@@ -19,11 +20,13 @@ import MainLayout from "./MainLayout";
 
 const ArticleLayout = ({
 	title,
+	excerpt,
 	coverImage,
 	date,
 	children,
 }: {
 	title: string;
+	excerpt: string;
 	coverImage: string;
 	date?: string;
 	children: React.ReactNode;
@@ -31,8 +34,19 @@ const ArticleLayout = ({
 	const dateColor = useColorModeValue("gray.900", "gray.400");
 	const cnt = children?.toString() || "";
 
+	const router = useRouter();
+
 	return (
-		<MainLayout title={title}>
+		<MainLayout
+			title={title}
+			og={{
+				title: title,
+				type: "article",
+				image: coverImage,
+				url: `https://jackhumphries.io${router.asPath}`,
+				description: excerpt,
+			}}
+		>
 			<Container maxW="container.lg" mt={30}>
 				<SimpleGrid
 					columns={1}
