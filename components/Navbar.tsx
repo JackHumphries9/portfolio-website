@@ -12,7 +12,7 @@ import NextLink from "next/link";
 import { ReactNode } from "react";
 
 const NavLink = ({ href, children }: { href: string; children: ReactNode }) => (
-	<NextLink href={href}>
+	<NextLink href={href} passHref>
 		<Link
 			p={2}
 			// @ts-ignore
