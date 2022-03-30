@@ -99,10 +99,10 @@ const ContactSection = () => {
 							}}
 						>
 							<FaInstagram
-								size={useBreakpointValue({ base: 30, sm: 20 })}
+								size={useBreakpointValue({ base: 30, md: 20 })}
 								style={{ display: "inline", paddingTop: "7px" }}
 							/>
-							{useBreakpointValue({ base: "", sm: "Instagram" })}
+							{useBreakpointValue({ base: "", md: "Instagram" })}
 						</Link>
 						<Link
 							href="https://twitter.com/jackphumphries"
@@ -116,13 +116,13 @@ const ContactSection = () => {
 							}}
 						>
 							<FaTwitter
-								size={useBreakpointValue({ base: 30, sm: 20 })}
+								size={useBreakpointValue({ base: 30, md: 20 })}
 								style={{
 									display: "inline",
 									paddingTop: "7px",
 								}}
 							/>{" "}
-							{useBreakpointValue({ base: "", sm: "Twitter" })}
+							{useBreakpointValue({ base: "", md: "Twitter" })}
 						</Link>
 						<Link
 							href="https://github.com/jackhumphries9"
@@ -136,10 +136,10 @@ const ContactSection = () => {
 							}}
 						>
 							<FaGithub
-								size={useBreakpointValue({ base: 30, sm: 20 })}
+								size={useBreakpointValue({ base: 30, md: 20 })}
 								style={{ display: "inline", paddingTop: "7px" }}
 							/>{" "}
-							{useBreakpointValue({ base: "", sm: "Github" })}
+							{useBreakpointValue({ base: "", md: "Github" })}
 						</Link>
 						<Link
 							href="https://linkedin.com/in/jack-humphries/"
@@ -153,10 +153,10 @@ const ContactSection = () => {
 							}}
 						>
 							<FaLinkedin
-								size={useBreakpointValue({ base: 30, sm: 20 })}
+								size={useBreakpointValue({ base: 30, md: 20 })}
 								style={{ display: "inline", paddingTop: "7px" }}
 							/>
-							{useBreakpointValue({ base: "", sm: "LinkedIn" })}
+							{useBreakpointValue({ base: "", md: "LinkedIn" })}
 						</Link>
 					</HStack>
 				</Flex>

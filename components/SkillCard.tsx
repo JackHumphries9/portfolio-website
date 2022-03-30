@@ -47,35 +47,36 @@ export default function SkillCard({
 				},
 			}}
 		>
-			{/* // TODO: Add motion on mouse move */}
-			<Center py={6}>
-				<Box
-					maxW={{ base: "100%", lg: "320px" }}
-					w={"full"}
-					bg={useColorModeValue("#F2F2F2", "#272727")}
-					boxShadow={"lg"}
-					rounded={"lg"}
-					p={6}
-					textAlign={"center"}
-				>
-					<Avatar
-						size={"xl"}
-						icon={icon}
-						mb={4}
-						pos={"relative"}
-						backgroundColor={useColorModeValue(
-							"brand.200",
-							"brand.400"
-						)}
-					/>
-					<Heading fontSize={"2xl"} fontFamily={"body"}>
-						{title}
-					</Heading>
-					<Text textAlign={"center"} px={3}>
-						{children}
-					</Text>
-				</Box>
-			</Center>
+			<motion.div whileHover={{ scale: 1.05 }}>
+				<Center py={6}>
+					<Box
+						maxW={{ base: "100%", lg: "320px" }}
+						w={"full"}
+						bg={useColorModeValue("#F2F2F2", "#272727")}
+						boxShadow={"lg"}
+						rounded={"lg"}
+						p={6}
+						textAlign={"center"}
+					>
+						<Avatar
+							size={"xl"}
+							icon={icon}
+							mb={4}
+							pos={"relative"}
+							backgroundColor={useColorModeValue(
+								"brand.200",
+								"brand.400"
+							)}
+						/>
+						<Heading fontSize={"2xl"} fontFamily={"body"}>
+							{title}
+						</Heading>
+						<Text textAlign={"center"} px={3}>
+							{children}
+						</Text>
+					</Box>
+				</Center>
+			</motion.div>
 		</motion.div>
 	);
 }
