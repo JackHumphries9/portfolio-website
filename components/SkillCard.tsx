@@ -57,15 +57,20 @@ export default function SkillCard({
 					p={6}
 					textAlign={"center"}
 				>
-					<Avatar size={"xl"} icon={icon} mb={4} pos={"relative"} />
+					<Avatar
+						size={"xl"}
+						icon={icon}
+						mb={4}
+						pos={"relative"}
+						backgroundColor={useColorModeValue(
+							"brand.400",
+							"brand.300"
+						)}
+					/>
 					<Heading fontSize={"2xl"} fontFamily={"body"}>
 						{title}
 					</Heading>
-					<Text
-						textAlign={"center"}
-						color={useColorModeValue("gray.700", "gray.400")}
-						px={3}
-					>
+					<Text textAlign={"center"} px={3}>
 						{children}
 					</Text>
 				</Box>
