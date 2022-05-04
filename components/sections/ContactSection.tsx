@@ -1,32 +1,38 @@
 import {
 	Box,
-	Button,
 	Container,
 	Flex,
-	FormControl,
-	GridItem,
 	Heading,
 	HStack,
-	Input,
 	Link,
-	SimpleGrid,
-	Textarea,
 	useBreakpointValue,
 	useColorModeValue,
-	VStack,
-	Text,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import React, { useState } from "react";
+import React from "react";
 import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { Element } from "react-scroll";
-import useEmailJS from "../../hooks/useEmailJS";
 import MailForm from "../MailForm";
 import SectionTitle from "../SectionTitle";
 
 // TODO: I should probably abstract this into multiple components at some point
 
 const ContactSection = () => {
+	/*
+
+	If your reading the below code and thinking "what the *beep*" then let me explain:
+
+	Basically I think there is an issue with fontawesome where it will not accept undefined values. When the page is first initalised,
+	I think that `useBreakpointValue` kicks out undefined but then it does it's job. As it's undefined it first gets ignored by font awesome
+	meaning the icon doesn't scale on small screens. So this code below makes sure the inital value is 30 and then its changed on desktop for
+	when its initalised.
+	*/
+
+	let iconSize = 30;
+	if (useBreakpointValue({ base: 30, md: 20 })) {
+		iconSize = useBreakpointValue({ base: 30, md: 20 })!;
+	}
+
 	return (
 		<Element name="contact">
 			<Container maxW="container.xl" p={0} pt={20}>
@@ -99,7 +105,7 @@ const ContactSection = () => {
 							}}
 						>
 							<FaInstagram
-								size={useBreakpointValue({ base: 30, md: 20 })}
+								size={iconSize}
 								style={{ display: "inline", paddingTop: "7px" }}
 							/>
 							{useBreakpointValue({ base: "", md: "Instagram" })}
@@ -116,7 +122,7 @@ const ContactSection = () => {
 							}}
 						>
 							<FaTwitter
-								size={useBreakpointValue({ base: 30, md: 20 })}
+								size={iconSize}
 								style={{
 									display: "inline",
 									paddingTop: "7px",
@@ -136,7 +142,7 @@ const ContactSection = () => {
 							}}
 						>
 							<FaGithub
-								size={useBreakpointValue({ base: 30, md: 20 })}
+								size={iconSize}
 								style={{ display: "inline", paddingTop: "7px" }}
 							/>{" "}
 							{useBreakpointValue({ base: "", md: "Github" })}
@@ -153,7 +159,7 @@ const ContactSection = () => {
 							}}
 						>
 							<FaLinkedin
-								size={useBreakpointValue({ base: 30, md: 20 })}
+								size={iconSize}
 								style={{ display: "inline", paddingTop: "7px" }}
 							/>
 							{useBreakpointValue({ base: "", md: "LinkedIn" })}

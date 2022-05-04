@@ -8,7 +8,6 @@ import {
 	Text,
 	useColorModeValue,
 } from "@chakra-ui/react";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 import { Element } from "react-scroll";

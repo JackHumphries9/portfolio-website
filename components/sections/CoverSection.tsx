@@ -1,13 +1,5 @@
 import { ChevronDownIcon } from "@chakra-ui/icons";
-import {
-	Box,
-	Center,
-	Container,
-	Flex,
-	Heading,
-	useColorMode,
-	useColorModeValue,
-} from "@chakra-ui/react";
+import { Box, Heading } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { Link as Scroll } from "react-scroll";
 import React from "react";

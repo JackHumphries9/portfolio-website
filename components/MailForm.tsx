@@ -4,7 +4,6 @@ import {
 	Flex,
 	FormControl,
 	GridItem,
-	Input,
 	SimpleGrid,
 	Text,
 	Textarea,
