@@ -1,4 +1,4 @@
-import { ChakraProviderProps, extendTheme, Input } from "@chakra-ui/react";
+import { extendTheme } from "@chakra-ui/react";
 import { mode } from "@chakra-ui/theme-tools";
 
 const styles = {
@@ -32,7 +32,7 @@ const colors = {
 };
 
 const config = {
-	initalColorMode: "dark",
+	initialColorMode: "dark",
 	useSystemColorMode: false,
 };
 

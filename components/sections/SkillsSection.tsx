@@ -28,17 +28,17 @@ const SkillsSection = () => {
 						transitionDelay={0.5}
 					>
 						I have experience with PHP, Node JS, and Flask building
-						web applications and web APIs. I endeavor to make my API
-						applications secure and fast so that the user experience
-						is safe and fast.
+						web applications and web APIs. I endeavour to make my
+						API applications secure and fast so that the user
+						experience is quick and safe.
 					</SkillCard>
 					<SkillCard
 						title="Backend"
 						icon={<FaDatabase />}
-						transitionDelay={0.5}
+						transitionDelay={1}
 					>
 						The other pillar of any application is the backend
-						deployment. Whether it is Docker or Kubernetes, I have
+						deployment. Whether it is Linux or Kubernetes, I have
 						experience deploying software using these techniques. I
 						can also deploy other apps.
 					</SkillCard>

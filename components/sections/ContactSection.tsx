@@ -22,10 +22,13 @@ const ContactSection = () => {
 
 	If your reading the below code and thinking "what the *beep*" then let me explain:
 
-	Basically I think there is an issue with fontawesome where it will not accept undefined values. When the page is first initalised,
+	Basically I think there is an issue with Font Awesome where it will not accept undefined values. When the page is first initalised,
 	I think that `useBreakpointValue` kicks out undefined but then it does it's job. As it's undefined it first gets ignored by font awesome
-	meaning the icon doesn't scale on small screens. So this code below makes sure the inital value is 30 and then its changed on desktop for
+	meaning the icon doesn't scale on small screens. So this code below makes sure the initial value is 30 and then its changed on desktop for
 	when its initalised.
+	
+	It's still an issue so I'm at a loss but Ill file a bug report or something.
+
 	*/
 
 	let iconSize = 30;
