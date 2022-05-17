@@ -46,7 +46,7 @@ const MainLayout = ({
 
 				<meta
 					name="theme-color"
-					content={useColorModeValue("#fff", "#333")}
+					content={useColorModeValue("#ffffff", "#181818")}
 				/>
 
 				<title>{title} - Jack Humphries</title>
