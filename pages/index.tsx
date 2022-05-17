@@ -1,4 +1,6 @@
+import { Container } from "@chakra-ui/react";
 import type { NextPage } from "next";
+import HomeLayout from "../components/layouts/HomeLayout";
 import MainLayout from "../components/layouts/MainLayout";
 import BioSection from "../components/sections/BioSection";
 import ContactSection from "../components/sections/ContactSection";
@@ -7,12 +9,14 @@ import SkillsSection from "../components/sections/SkillsSection";
 
 const Home: NextPage = () => {
 	return (
-		<MainLayout title="Home">
+		<HomeLayout title="Home">
 			<CoverSection />
-			<BioSection />
-			<SkillsSection />
-			<ContactSection />
-		</MainLayout>
+			<Container maxW="full">
+				<BioSection />
+				<SkillsSection />
+				<ContactSection />
+			</Container>
+		</HomeLayout>
 	);
 };
 

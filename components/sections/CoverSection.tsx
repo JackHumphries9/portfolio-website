@@ -26,7 +26,7 @@ const CoverSection = () => {
 							overflowY="hidden"
 							wordBreak={"keep-all"}
 							as="h1"
-							fontSize={{ base: "12vw", md: "9vw" }}
+							fontSize={{ base: "14vw", md: "9vw" }}
 							textAlign="right"
 							fontWeight="200"
 						>
@@ -44,7 +44,7 @@ const CoverSection = () => {
 						<Heading
 							wordBreak={"keep-all"}
 							as="h1"
-							fontSize={{ base: "12vw", md: "9vw" }}
+							fontSize={{ base: "14vw", md: "9vw" }}
 							fontWeight="200"
 						>
 							Software Developer
