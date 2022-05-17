@@ -10,7 +10,7 @@ import {
 	Text,
 	useColorModeValue,
 } from "@chakra-ui/react";
-import ChakraUIRenderer from "chakra-ui-markdown-renderer";
+import ChakraUIRenderer from "../MarkdownRenderer";
 import { useRouter } from "next/router";
 import React from "react";
 import ReactMarkdown from "react-markdown";
