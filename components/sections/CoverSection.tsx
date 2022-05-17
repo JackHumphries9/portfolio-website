@@ -16,7 +16,10 @@ const CoverSection = () => {
 			>
 				<Box flex={1}>
 					<motion.div
-						animate={{ translateX: ["100%", "0%"] }}
+						animate={{
+							translateX: ["100%", "0%"],
+							opacity: ["0%", "100%"],
+						}}
 						transition={{
 							duration: 1,
 							ease: "easeOut",
