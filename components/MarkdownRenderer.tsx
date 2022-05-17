@@ -7,6 +7,7 @@
 import * as React from "react";
 import deepmerge from "deepmerge";
 import { Components } from "react-markdown";
+import { useColorModeValue } from "@chakra-ui/react";
 import {
 	Code,
 	Divider,
@@ -86,7 +87,6 @@ export const defaults: Defaults = {
 	hr: (props) => {
 		return <Divider />;
 	},
-	a: Link,
 	img: Image,
 	text: (props) => {
 		const { children } = props;
@@ -108,6 +108,7 @@ export const defaults: Defaults = {
 				as={ordered ? "ol" : "ul"}
 				styleType={styleType}
 				pl={4}
+				pb={2}
 				{...attrs}
 			>
 				{children}
@@ -130,6 +131,7 @@ export const defaults: Defaults = {
 				as={ordered ? "ol" : "ul"}
 				styleType={styleType}
 				pl={4}
+				pb={2}
 				{...attrs}
 			>
 				{children}
@@ -179,6 +181,11 @@ export const defaults: Defaults = {
 	tr: (props) => <Tr>{props.children}</Tr>,
 	td: (props) => <Td>{props.children}</Td>,
 	th: (props) => <Th>{props.children}</Th>,
+	a: (props) => (
+		<Link href={props.href} textDecor="underline">
+			{props.children}
+		</Link>
+	),
 };
 
 function ChakraUIRenderer(theme?: Defaults, merge = true): Components {

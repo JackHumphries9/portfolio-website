@@ -29,8 +29,9 @@ const ContactSection = () => {
 	
 	It's still an issue so I'm at a loss but I'll file a bug report or something.
 
-	EDIT: I've fixed this, you can set a default breakpoint value in case it fails. I just set it to base so that by default it renders
-	for mobile then the update to the hook triggers this to update. 
+	EDIT: I've fixed this, I didn't know this but intellisense told me you can set a default breakpoint value in case it fails. I just set it to 
+	base so that by default it renders for mobile then the update to the hook triggers this to update. I still wanna keep the above comment just 
+	to show my learning process.
 
 	*/
 

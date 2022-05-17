@@ -5,6 +5,7 @@ coverImage: "/images/blog/switching-from-aws-to-digital-ocean-cover.jpg"
 date: "2021-02-02T16:51:52.296Z"
 ogImage:
     url: "/images/default.jpg"
+minsRead: 2
 ---
 
 **This article is from my old blog website**

@@ -5,13 +5,14 @@ coverImage: "/images/default.jpg"
 date: "2022-03-30T21:54:50.000Z"
 ogImage:
     url: "/images/default.jpg"
+minsRead: 5
 ---
 
 Recently, I've had a revelation. It has completely changed my perspective on code and software development. I've been coding for over eight years now and this has to be the biggest perspective shift I've experienced. I have heard this statement going around where code was compared to literature, more specifically a poem. At first, I brushed this off thinking not much of it. But now I understand why.
 
-So what is this revelation, your probably asking? Well, it's that code can be arranged in many different ways. To be more specific, you can write your program declaratively or imperatively. For some of you, this may seem obvious and I realise now how obvious it is but during my time coding, I've never really thought about program structure. I've always focused on making the program work and then the job is done. Going back to the literature analgy, I've always focused on the actual story rather than conveying it to the reader.
+So what is this revelation, your probably asking? Well, it's that code can be arranged in many different ways. To be more specific, you can write your program declaratively or imperatively. For some of you, this may seem obvious and I realise now how obvious it is but during my time coding, I've never really thought about program structure. I've always focused on making the program work and then the job is done. Going back to the literature analogy, I've always focused on the actual story rather than conveying it to the reader.
 
-With the way I've learnt to code, this was obviously an issue. I've basically taught myself most things using YouTube and a variaty of other sources. This has forced me to learn from many different sources and have conflicting views on how to write code.
+With the way I've learnt to code, this was obviously an issue. I've basically taught myself most things using YouTube and a variety of other sources. This has forced me to learn from many different sources and have conflicting views on how to write code.
 
 So whats the deal with declarative and imperative programming? Well, I've always (or most of the time) written code in an imperative way. This is due to the reason I've mentioned above and also I've had this fear or overcomplicating the code instead it slows down ever so slightly. A perfect example is the first build of [Socially](/works/socially). If you go back and look at [Version 0.5](https://github.com/JackHumphries9/Socially/tree/legacy), the actual frontend code is all in one html file (specifically, [this](https://github.com/JackHumphries9/Socially/blob/legacy/index.html) file). This is just a high level example but below is the actual
 
@@ -129,6 +130,6 @@ def main():
 main()
 ```
 
-While this approach has slightly more lines of code, it is a lot more readable and tracing through the program is a lot easier. If there is an issue with a question, the code is contained inside the `askQuestion()` function. An object orientated approach would also probably mean less lines and it would look alot better.
+While this approach has slightly more lines of code, it is a lot more readable and tracing through the program is a lot easier. If there is an issue with a question, the code is contained inside the `askQuestion()` function. An object orientated approach would also probably mean less lines and it would look a lot better.
 
-In summary, this discovery has helped me write more consise and better code that reads a lot better and also is easy to debug and test. I hope this has helped you to discover the different ways of writing code.
+In summary, this discovery has helped me write more concise and better code that reads a lot better and also is easy to debug and test. I hope this has helped you to discover the different ways of writing code.

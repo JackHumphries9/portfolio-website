@@ -23,6 +23,7 @@ const Home = ({ allArticles }: Props) => {
 								date={blog.date}
 								slug={"/blog/" + blog.slug}
 								key={blog.slug}
+								minsRead={blog.minsRead}
 							>
 								{blog.excerpt}
 							</ArticleCard>
@@ -41,6 +42,7 @@ export const getStaticProps = async () => {
 		"slug",
 		"coverImage",
 		"excerpt",
+		"minsRead",
 	]);
 
 	return {

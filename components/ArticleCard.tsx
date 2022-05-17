@@ -16,12 +16,14 @@ export default function ArticleCard({
 	imgUrl,
 	date,
 	slug,
+	minsRead,
 }: {
 	title: string;
 	children: React.ReactNode;
 	imgUrl: string;
 	date?: string;
 	slug: string;
+	minsRead?: string;
 }) {
 	return (
 		<Link href={slug} passHref>
@@ -66,7 +68,25 @@ export default function ArticleCard({
 							spacing={4}
 							align={"center"}
 						>
-							{date ? (
+							{date && !minsRead ? (
+								<Stack
+									direction={"column"}
+									spacing={0}
+									fontSize={"sm"}
+								>
+									<Text>{new Date(date).toDateString()}</Text>
+								</Stack>
+							) : null}
+							{minsRead && !date ? (
+								<Stack
+									direction={"column"}
+									spacing={0}
+									fontSize={"sm"}
+								>
+									<Text>{minsRead} min read</Text>
+								</Stack>
+							) : null}
+							{date && minsRead ? (
 								<Stack
 									direction={"column"}
 									spacing={0}
@@ -76,6 +96,7 @@ export default function ArticleCard({
 										{new Date(date).toLocaleDateString(
 											"en-GB"
 										)}
+										&nbsp;·&nbsp; {minsRead} mins read
 									</Text>
 								</Stack>
 							) : null}

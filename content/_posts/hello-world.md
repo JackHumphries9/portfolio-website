@@ -5,6 +5,7 @@ coverImage: "/images/blog/hello-world-cover.jpg"
 date: "2022-03-23T20:16:58.531Z"
 ogImage:
     url: "/images/blog/hello-world-cover.jpg"
+minsRead: 3
 ---
 
 Hello World! Yeah I've finally got around to it! May I present my brand new website which is completely coded from the ground up to give you an overview of me and my skills. This new website is so much superior and better than my old one. Plus, I've even got a shiny new domain name [jackhumphries.io](https://jackhumphries.io). This article is the first to be written and it will give you a brief overview of how this is much better and possibly plans for the future.

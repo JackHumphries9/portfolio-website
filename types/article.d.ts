@@ -8,6 +8,7 @@ type ArticleType = {
 		url: string;
 	};
 	content: string;
+	minsRead: string;
 };
 
 export default ArticleType;
