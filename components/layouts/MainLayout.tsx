@@ -1,6 +1,5 @@
-import { Box, Container } from "@chakra-ui/react";
+import { Box, Container, useColorModeValue } from "@chakra-ui/react";
 import Head from "next/head";
-import { useRouter } from "next/router";
 import React from "react";
 import IOpenGraph from "../../types/opengraph";
 
@@ -44,6 +43,12 @@ const MainLayout = ({
 				/>
 				<meta property="og:type" content={opengraph.type} />
 				<meta property="og:image" content={opengraph.image} />
+
+				<meta
+					name="theme-color"
+					content={useColorModeValue("#fff", "#333")}
+				/>
+
 				<title>{title} - Jack Humphries</title>
 			</Head>
 

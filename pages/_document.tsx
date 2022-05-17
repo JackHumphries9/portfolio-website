@@ -51,7 +51,6 @@ export default class Document extends NextDocument {
 						name="msapplication-config"
 						content="/favicons/browserconfig.xml"
 					/>
-					<meta name="theme-color" content="#ffffff"></meta>
 				</Head>
 				<body>
 					<ColorModeScript
