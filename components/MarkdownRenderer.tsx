@@ -61,7 +61,7 @@ export const defaults: Defaults = {
 		const { inline, children, className } = props;
 
 		if (inline) {
-			return <Code children={children} />;
+			return <Code></Code>;
 		}
 
 		const match = /language-(\w+)/.exec(className || "");
@@ -74,8 +74,9 @@ export const defaults: Defaults = {
 				d="block"
 				w="full"
 				language={match![1]}
-				children={String(children).replace(/\n$/, "")}
-			/>
+			>
+				{String(children).replace(/\n$/, "")}
+			</SyntaxHighlighter>
 		);
 	},
 	del: (props) => {

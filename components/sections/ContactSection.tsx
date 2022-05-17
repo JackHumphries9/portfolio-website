@@ -22,19 +22,19 @@ const ContactSection = () => {
 
 	If your reading the below code and thinking "what the *beep*" then let me explain:
 
-	Basically I think there is an issue with Font Awesome where it will not accept undefined values. When the page is first initalised,
+	Basically I think there is an issue with Font Awesome where it will not accept undefined values. When the page is first initialised,
 	I think that `useBreakpointValue` kicks out undefined but then it does it's job. As it's undefined it first gets ignored by font awesome
 	meaning the icon doesn't scale on small screens. So this code below makes sure the initial value is 30 and then its changed on desktop for
-	when its initalised.
+	when its initialised.
 	
-	It's still an issue so I'm at a loss but Ill file a bug report or something.
+	It's still an issue so I'm at a loss but I'll file a bug report or something.
+
+	EDIT: I've fixed this, you can set a default breakpoint value in case it fails. I just set it to base so that by default it renders
+	for mobile then the update to the hook triggers this to update. 
 
 	*/
 
-	let iconSize = 30;
-	if (useBreakpointValue({ base: 30, md: 20 })) {
-		iconSize = useBreakpointValue({ base: 30, md: 20 })!;
-	}
+	const iconSize = useBreakpointValue({ base: 30, md: 20 }, "base")!;
 
 	return (
 		<Element name="contact">
