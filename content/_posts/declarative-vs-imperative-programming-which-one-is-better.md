@@ -1,6 +1,6 @@
 ---
 title: "Declarative VS Imperative Programming - Which one is better?"
-excerpt: "Recently, I've had a revelation. It has completely changed my perspective on code and software development. I've been coding for over eight years now and this has to be the biggest perspective shift I've experienced."
+excerpt: "Recently, I've had a revelation. It has completely changed my perspective on code and software development. I've been coding for over eight years now and this has to be the biggest perspective shift I've experienced"
 coverImage: "/images/default.jpg"
 date: "2022-03-30T21:54:50.000Z"
 ogImage:

@@ -1,6 +1,6 @@
 ---
 title: "Automated Weather Forecasting"
-excerpt: "Something that has interested me for a while is how code can be used to generate media. Specifically, photos and video that is dynamic and can be generated via an API or some other trigger. It has really interested me and I am constantly thinking that this is the future of content."
+excerpt: "Something that has interested me for a while is how code can be used to generate media. Specifically, photos and video that is dynamic and can be generated via an API or some other trigger. It has really interested me and I am constantly thinking that this is the future of content"
 coverImage: "/images/blog/automated-weather-forecasting-cover.png"
 date: "2022-05-04T14:28:42.277Z"
 ogImage:

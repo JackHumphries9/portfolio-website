@@ -25,7 +25,7 @@ const Home = ({ allArticles }: Props) => {
 								key={blog.slug}
 								minsRead={blog.minsRead}
 							>
-								{blog.excerpt}
+								{blog.excerpt}...
 							</ArticleCard>
 						);
 					})}

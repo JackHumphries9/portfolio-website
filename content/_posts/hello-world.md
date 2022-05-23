@@ -1,6 +1,6 @@
 ---
 title: "Hello World!"
-excerpt: "Hello World! Yeah I've finally got around to it! May I present my brand new website which is completely coded from the ground up to give you an overview of me and my skills. This new website is so much superior and better than my old one."
+excerpt: "Hello World! Yeah I've finally got around to it! May I present my brand new website which is completely coded from the ground up to give you an overview of me and my skills. This new website is so much superior and better than my old one"
 coverImage: "/images/blog/hello-world-cover.jpg"
 date: "2022-03-23T20:16:58.531Z"
 ogImage:

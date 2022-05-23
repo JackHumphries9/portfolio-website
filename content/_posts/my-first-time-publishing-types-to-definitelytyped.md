@@ -1,6 +1,6 @@
 ---
 title: "My First Time Publishing Typings to DefinitelyTyped"
-excerpt: "If you've ever used Typescript you'll have probably come across this situation. You want to use a package from NPM, do npm install <your-package> and installed it then VSCode starts kicking off about not having a type declaration file. Luckily, Microsoft have your back with DefinitelyTyped."
+excerpt: "If you've ever used Typescript you'll have probably come across this situation. You want to use a package from NPM, do npm install <your-package> and installed it then VSCode starts kicking off about not having a type declaration file. Luckily, Microsoft have your back with DefinitelyTyped"
 coverImage: "/images/default.jpg"
 date: "2022-05-04T19:38:21.167Z"
 ogImage:

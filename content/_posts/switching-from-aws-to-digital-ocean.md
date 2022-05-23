@@ -1,6 +1,6 @@
 ---
 title: "Switching from AWS to Digital Ocean"
-excerpt: "This article is from my old blog website! Amazon Web Services is an amazing cloud provider where you can literally do anything possible.There are literally hundreds of services that all do a multitude of things, including AI and just general servers."
+excerpt: "This article is from my old blog website! Amazon Web Services is an amazing cloud provider where you can literally do anything possible.There are literally hundreds of services that all do a multitude of things, including AI and just general servers"
 coverImage: "/images/blog/switching-from-aws-to-digital-ocean-cover.jpg"
 date: "2021-02-02T16:51:52.296Z"
 ogImage:

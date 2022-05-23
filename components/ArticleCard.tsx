@@ -93,9 +93,7 @@ export default function ArticleCard({
 									fontSize={"sm"}
 								>
 									<Text>
-										{new Date(date).toLocaleDateString(
-											"en-GB"
-										)}
+										{new Date(date).toDateString()}
 										&nbsp;·&nbsp; {minsRead} mins read
 									</Text>
 								</Stack>
