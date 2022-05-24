@@ -62,7 +62,7 @@ export const defaults: Defaults = {
 		const { inline, children, className } = props;
 
 		if (inline) {
-			return <Code></Code>;
+			return <Code>{children}</Code>;
 		}
 
 		const match = /language-(\w+)/.exec(className || "");
