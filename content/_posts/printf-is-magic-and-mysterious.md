@@ -110,7 +110,8 @@ int main() {
 
   int len = strlen(source);
   for (int i = 0; i < len; i++) {
-    printf("%c", source[i]); // write(1, &source[i], 1);
+    printf("%c", source[i]); 
+    // write(1, &source[i], 1);
   }
 
   printf("\n");
